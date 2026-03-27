@@ -31,7 +31,7 @@ static inline struct cpufreq_policy * sysfs_get_policy(unsigned int cpu) { retur
 static inline struct cpufreq_available_governors * sysfs_get_available_governors(unsigned int cpu) { return NULL; }
 static inline struct cpufreq_available_frequencies * sysfs_get_available_frequencies(unsigned int cpu) { return NULL; }
 static inline struct cpufreq_affected_cpus * sysfs_get_affected_cpus(unsigned int cpu) { return NULL; }
-static inline struct cpufreq_related_cpus * sysfs_get_affected_cpus(unsigned int cpu) { return NULL; }
+static inline struct cpufreq_affected_cpus * sysfs_get_related_cpus(unsigned int cpu) { return NULL; }
 static inline struct cpufreq_stats * sysfs_get_stats(unsigned int cpu, unsigned long long *total_time) { return NULL; }
 static inline unsigned long sysfs_get_transitions(unsigned int cpu) { return 0; }
 static inline int sysfs_set_policy(unsigned int cpu, struct cpufreq_policy *policy) { return -ENOSYS; }
@@ -73,4 +73,3 @@ static inline struct cpufreq_affected_cpus * proc_get_related_cpus(unsigned int 
 static inline int proc_modify_policy_min(unsigned int cpu, unsigned long min_freq) { return -ENOSYS; }
 static inline int proc_modify_policy_max(unsigned int cpu, unsigned long max_freq) { return -ENOSYS; }
 static inline int proc_modify_policy_governor(unsigned int cpu, char *governor) { return -ENOSYS; }
-
